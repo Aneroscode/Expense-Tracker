@@ -1,0 +1,78 @@
+
+
+[
+    {   
+        "details" : "Food Catering" ,
+        "merchant" : "Mc Food" ,
+        "amount" : 250,
+        "Report" : "November,2020" ,
+        "satus"  : "submitted",
+        "id" : 1
+     },
+     {
+        "details" : "Office Supplies" ,
+        "merchant" : "Officio" ,
+        "amount" : 150,
+        "Report" : "November,2020" ,
+        "satus"  : "Not submitted",
+        "id" : 2
+     },
+     {
+        "details" : "Food Catering" ,
+        "merchant" : "Resturant" ,
+        "amount" : 250,
+        "Report" : "November,2020" ,
+        "satus"  : "submitted",
+        "id" : 3
+     },
+     {
+        "details" : "Food Catering" ,
+        "merchant" : "Airlines" ,
+        "amount" : 250,
+        "Report" : "November,2020" ,
+        "satus"  : "submitted",
+        "id" : 4
+     },
+     {
+        "details" : "Food Catering" ,
+        "merchant" : "Mc Food" ,
+        "amount" : 350,
+        "Report" : "November,2020" ,
+        "satus"  : "Not submitted",
+        "id" : 5
+     },
+     {
+        "details" : "Food Catering" ,
+        "merchant" : "Mc Food" ,
+        "amount" : 400,
+        "Report" : "November,2020" ,
+        "satus"  : "submitted",
+        "id" : 6
+     },
+     {
+        "details" : "Food Catering" ,
+        "merchant" : "Mc Food" ,
+        "amount" : 1000,
+        "Report" : "November,2020" ,
+        "satus"  : "submitted",
+        "id" : 7
+     },
+     {
+        "details" : "Food Catering" ,
+        "merchant" : "Mc Food" ,
+        "amount" : 230,
+        "Report" : "November,2020" ,
+        "satus"  : "submitted",
+        "id" : 8
+     },
+     
+     {
+        "details" : "Food Catering" ,
+        "merchant" : "Mc Food" ,
+        "amount" : 150,
+        "Report" : "November,2020" ,
+        "satus"  : "submitted",
+        "id" : 9
+     }
+   
+]
