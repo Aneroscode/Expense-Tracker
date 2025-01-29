@@ -1,25 +1,40 @@
-import { faBars, faBed, faBurger, faListDots, faLuggageCart, faMobile, faNetworkWired, faScissors } from '@fortawesome/free-solid-svg-icons'
+import { faBars, faBed, faBurger, faCancel, faDeleteLeft, faDumpster, faListDots, faLuggageCart, faMobile, faNetworkWired, faScissors, faXmark } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import React, { useEffect, useState } from 'react'
 import axios from 'axios'
 import DataTable from 'react-data-table-component'
 
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 
 const Expenses = () => {
 
   const [data, setData] = useState([])
+  const navigate = useNavigate()
+  
 
       useEffect(() => {
-          axios.get('http://localhost:3031/data')
+          axios.get('http://localhost:3000/data')
           .then(res => setData(res.data))
           .catch(err => console.log(err))
         }
         
       ,[])
- console.log(data)
+
+    function handleDelete(id) {
+        const del = window.confirm("Do you want to delete?")
+
+        if(del){
+          axios.delete('http://localhost:3000/data/'+id)
+          .then(res => {
+            alert('Expenses has been deleted')
+          }).catch(err => console.log(err))
+        }
+    } 
  
-  const [status, setStatus] = useState(false)
+ 
+  
+
+ 
   
 
   return (
@@ -27,9 +42,8 @@ const Expenses = () => {
        <div className=' flex justify-between   py-2'>
         <h1 className='text-2xl md:3xl lg:4xl font-bold'>Expenses</h1>
         <div className='flex space-x-4'>
-        <button className='bg-red-500 font-bold py-1 px-7 rounded-lg hover:bg-red-400 active:bg-red-300 '>Delete</button>
           <Link to={"/create"}>
-          <button className='py-1 px-4 rounded-xl font-bold hover:scale-110'>+New expense</button>
+          <button  className='py-1 px-4 rounded-xl font-bold hover:scale-110'>+New expense</button>
           </Link>
           <div className='flex mt-2 space-x-3 '>
             <FontAwesomeIcon className=' py-1 px-1 rounded-lg hover:scale-110' icon={faNetworkWired}/>
@@ -59,10 +73,11 @@ const Expenses = () => {
             <tr key={i} className='bg-white border-b-2'>
              <td className='p-3 text-sm text-gray-700'>
                <div className='flex items-centers gap-2 '>
-                    <input type="checkbox" name='checkbox' id='checkbox' />
+               <FontAwesomeIcon onClick={e => handleDelete(current.id)} className='mt-3 text-red-500 cursor-pointer hover:scale-125 ' icon={faXmark}/>
+                    
                     <FontAwesomeIcon className='mt-1 rounded-full bg-opacity-50 bg-yellow-300 px-2 py-2' icon={faBurger}/>
                   <div>
-                    <span>11/09/2022</span>
+                    <span>{current.date}</span>
                     <h4>{current.details}</h4>
                   </div>
                 </div>
@@ -71,12 +86,16 @@ const Expenses = () => {
 
              <td className='p-3 text-sm text-gray-700'>{current.merchant}</td>
              <td className='p-3 text-sm text-gray-700'>{current.amount}</td>
-             <td className='p-3 text-sm text-gray-700'>{current.Report}</td>
-             <td className='p-3 text-sm text-gray-700 '>{current.satus}</td>
+             <td className='p-3 text-sm text-gray-700'>{current.report}</td>
+             <td className='p-3 text-sm text-gray-700 '>{current.status}</td>
+
+
+            
             </tr>
           
             
           </tbody>
+          
         ))
       }
       </table>

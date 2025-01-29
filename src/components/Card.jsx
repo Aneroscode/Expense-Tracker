@@ -94,7 +94,7 @@ const Card = () => {
 
                     <div className='flex flex-col text-sm font-semi-bold items-center space-y-'>
                         <h4 className='font-bold'>Subject</h4>
-                        <span className='bg-pink-300 rounded-xl px-2 bg-opacity-75'>Office Supplies</span>
+                        <span className='bg-pink-300 rounded-xl px-2  bg-opacity-75'>Office Supplies</span>
                         <span className='bg-green-300 rounded-xl px-2 bg-opacity-75'>Business Launch</span>
                         <span className='bg-blue-300 rounded-xl px-2 bg-opacity-75'>Travel Expenses</span>
                         <span className='bg-red-300 rounded-xl px-2 bg-opacity-75'>Client Dinner</span>

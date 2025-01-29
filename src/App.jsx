@@ -10,7 +10,12 @@ import Create from './pages/Create'
 const App = () => {
   return (
   
+    <div>
+
+      {/* <Signup/> */}
         <div>
+
+         
         <Sidebar/>
          
         
@@ -37,6 +42,9 @@ const App = () => {
         
 
         </div>
+
+      
+    </div>
         
    
   )

@@ -8,10 +8,12 @@ const Create = () => {
   const [inputData, setInputData] = useState({
 
     details : "",
+    date : "",
     merchant : "",
     amount : "",
     report : "",
     status : "",
+    id: "",
     
   })
 
@@ -20,7 +22,7 @@ const Create = () => {
   function handleSubmit(event) { 
 
     event.preventDefault()
-    axios.post('http://localhost:3031/data', inputData)
+    axios.post('http://localhost:3000/data', inputData)
     .then(res => {
         alert("Expense Added Successfully")
         navigat('/')
@@ -43,6 +45,14 @@ const Create = () => {
                 
                 </div>
 
+                <div className='mb-2'>
+                    <label className='font-semibold text-lg'>Date:</label>
+                    <input className='p-2 w-full border-2 rounded-lg border-x-gray-200' type='date' name='date' 
+                      
+                      onChange={e => setInputData({...inputData, date: e.target.value})}/>
+                </div>
+
+
 
 
                 <div className='mb-2'>
@@ -55,14 +65,14 @@ const Create = () => {
 
                 <div className='mb-2'>
                     <label className='font-semibold text-lg'>Amount:</label>
-                    <input className='p-2 w-full border-2 rounded-lg border-x-gray-200' type='text' name='amount' placeholder='Enter your amount'
+                    <input className='p-2 w-full border-2 rounded-lg border-x-gray-200' type='number' name='amount' placeholder='Enter your amount'
                       
                       onChange={e => setInputData({...inputData, amount: e. target.value})} />
                 </div>
 
                 <div className='mb-2'>
                     <label className='font-semibold text-lg'>Report:</label>
-                    <input className='p-2 w-full border-2 rounded-lg border-x-gray-200' type='text' name='report' placeholder='Enter your Report'
+                    <input className='p-2 w-full border-2 rounded-lg border-x-gray-200' type='date' name='report' placeholder='Enter your Report'
                        
                        onChange={e => setInputData({...inputData, report: e.target.value})}
                        />
@@ -71,13 +81,30 @@ const Create = () => {
              
 
                 <div className='mb-2'>
-                    <label className='font-semibold text-lg'>Status:</label>
-                    <input className='p-2 w-full border-2 rounded-lg border-x-gray-200' type='text' name='status' placeholder='Enter your Status'
-                      
-                      onChange={e => setInputData({...inputData, status: e.target.value})}
-                     
-                     />
+                  <h1 className='text-xl font-bold'>Status:</h1>
+                 <div className='flex gap-10'> 
+                      <div className='flex gap-3 flex-row'>
+                        <label className='font-semibold text-lg '>Submitted</label>
+                        <input className='p-2' type='radio' name='status' placeholder='Enter your Status'
+                          
+                          onChange={e => setInputData({...inputData, status: e.target.value})}
+                        
+                        />
+                      </div>
+
+                      <div className='flex gap-3'>
+                        <label className='font-semibold text-lg '>Not Submitted</label>
+                        <input className='p-2' type='radio' name='status' placeholder='Enter your Status'
+                          
+                          onChange={e => setInputData({...inputData, status: e.target.value})}
+                        
+                        />
+                      </div>
+                   </div>
                 </div>
+
+
+                
 
                 <button
                     

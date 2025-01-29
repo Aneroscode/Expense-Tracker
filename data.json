@@ -2,91 +2,94 @@
   "data": [
     {
       "details": "Food Catering",
+      "date": "11/09/2022",
       "merchant": "Mc Food",
       "amount": 250,
-      "Report": "November,2020",
-      "satus": "submitted",
+      "report": "November,2020",
+      "status": "submitted",
       "id": 1
     },
     {
       "details": "Office Supplies",
+      "date": "02/04/2022",
       "merchant": "Officio",
       "amount": 150,
-      "Report": "November,2020",
-      "satus": "Not submitted",
+      "report": "November,2020",
+      "status": "Not submitted",
       "id": 2
     },
     {
       "details": "Food Catering",
+      "date": "03/10/2022",
       "merchant": "Resturant",
       "amount": 250,
-      "Report": "November,2020",
-      "satus": "submitted",
+      "report": "November,2020",
+      "status": "submitted",
       "id": 3
     },
     {
       "details": "Food Catering",
+      "date": "21/12/2022",
       "merchant": "Airlines",
       "amount": 250,
-      "Report": "November,2020",
-      "satus": "submitted",
+      "report": "November,2020",
+      "status": "submitted",
       "id": 4
     },
     {
       "details": "Food Catering",
+      "date": "15/01/2022",
       "merchant": "Mc Food",
       "amount": 350,
-      "Report": "November,2020",
-      "satus": "Not submitted",
+      "report": "November,2020",
+      "status": "Not submitted",
       "id": 5
     },
     {
       "details": "Food Catering",
+      "date": "30/07/2022",
       "merchant": "Mc Food",
       "amount": 400,
-      "Report": "November,2020",
-      "satus": "submitted",
+      "report": "November,2020",
+      "status": "submitted",
       "id": 6
     },
     {
       "details": "Food Catering",
+      "date": "11/09/2022",
       "merchant": "Mc Food",
       "amount": 1000,
-      "Report": "November,2020",
-      "satus": "submitted",
+      "report": "November,2020",
+      "status": "submitted",
       "id": 7
     },
     {
       "details": "Food Catering",
+      "date": "11/08/2022",
       "merchant": "Mc Food",
       "amount": 230,
-      "Report": "November,2020",
-      "satus": "submitted",
+      "report": "November,2020",
+      "status": "submitted",
       "id": 8
     },
     {
       "details": "Food Catering",
+      "date": "11/09/2022",
       "merchant": "Mc Food",
       "amount": 150,
-      "Report": "November,2020",
-      "satus": "submitted",
+      "report": "November,2020",
+      "status": "submitted",
       "id": 9
     },
     {
-      "id": "df6e",
-      "details": "momo",
+      "id": 10,
+      "details": "new",
+      "date": "2025-01-25",
       "merchant": "anero",
-      "amount": "100",
-      "report": "submitted",
-      "status": "red"
-    },
-    {
-      "id": "30e7",
-      "details": "",
-      "merchant": "",
-      "amount": "",
-      "report": "",
-      "status": ""
+      "amount": "11",
+      "report": "2025-01-29",
+      "status": "on"
+      
     }
   ]
 }
