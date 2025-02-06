@@ -1,9 +1,10 @@
 import { faBook, faClock, faDollar, faPaperPlane, faPlane, faReceipt } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { Chart as ChartJS, LineElement, BarElement, LinearScale } from 'chart.js'
-import { Bar, Line } from 'react-chartjs-2'
+import { Chart as ChartJS } from 'chart.js/auto'
+import { Bar, Doughnut, Line } from 'react-chartjs-2'
 import React from 'react'
 import { Link } from 'react-router-dom'
+
 
 
 const Card = () => {
@@ -108,7 +109,7 @@ const Card = () => {
 
 
 
-        <div className='  rounded-lg border border-gray-200 bg-stone-100 col-span-4 '>
+        <div className='  rounded-lg border border-gray-200 bg-stone-100 col-span-4  '>
             <div className='  bg-gray-50 border-b-2 border-gray-200'>
                     <h4 className=' px-3 py-2 font-bold  md:px-3 md:py-1'>Pending Tasks</h4>
             </div>
@@ -138,19 +139,34 @@ const Card = () => {
                 </div>
             </div>
         </div>
+
+
         
-        <div className=' rounded-lg border border-gray-200 bg-stone-100 col-span-4 '>
+        
+        <div className=' rounded-lg border border-gray-200 bg-stone-100 col-span-4 h-0 '>
             <div className='  bg-gray-50 border-b-2 border-gray-200'>
                     <h4 className='px-3 py-1 font-bold'>Pending Tasks</h4>
             </div>
 
                 <div className=' flex flex-col lg:flex lg:flex-row px-3 py-2 gap-2 '>
 
-                    <div className='lg:w-1/2 bg-red-200'>
+                    <div className='lg:w-1/2 bg-gray-200 rounded-lg p-4' >
 
                         <h4>Team Spending Trend</h4>
-                        <div className=''>
+                        <div className=' '>
+                          <Bar
                           
+                            data={{
+                                labels : ['PJ', 'SJ', 'MB', 'IS', 'DW','NJ', 'BS'],
+                                datasets: [
+                                    {
+                                        label:'Expenses',
+                                        data: [0, 20,40,60,80, 100]
+                                    }
+                                ],
+                            }}
+                          
+                          />
                         </div>
 
 
@@ -158,8 +174,32 @@ const Card = () => {
 
 
 
-                    <div className='lg:w-1/2 bg-green-500'>
+                    <div className='lg:w-1/2 bg-gray-200 rounded-lg p-4'>
                         <h4>Day-to-Day Expenses</h4>
+
+                                                 
+                        <Line
+                        
+                        data={{
+                            labels :['Accomodatio', 'COMMS', 'Services', 'Food', 
+                                'fuel'
+                             ],
+
+                             datasets: [
+                                {
+                                    label:'Expenses',
+                                    data: [0, 20,30,40,80, 100]
+                                }
+                            ],
+                        }}
+                        
+                        
+                        />
+                        
+                          
+                     
+                        
+                        
                     </div>
                 </div>
         </div>

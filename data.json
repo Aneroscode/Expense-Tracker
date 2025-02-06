@@ -8,6 +8,7 @@
       "report": "November,2020",
       "status": "submitted",
       "id": 1
+      
     },
     {
       "details": "Office Supplies",
@@ -86,7 +87,7 @@
       "details": "new",
       "date": "2025-01-25",
       "merchant": "anero",
-      "amount": "11",
+      "amount": 11,
       "report": "2025-01-29",
       "status": "on"
       
