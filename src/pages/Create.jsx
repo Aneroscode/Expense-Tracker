@@ -2,8 +2,11 @@ import axios from 'axios'
 import React from 'react'
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
-
+import { v4 as uuidv4 } from 'uuid'
 const Create = () => {
+
+  const id = uuidv4()
+  
 
   const [inputData, setInputData] = useState({
 
@@ -13,9 +16,12 @@ const Create = () => {
     amount : "",
     report : "",
     status : "",
-    id: "",
+    id
     
   })
+
+  
+  
 
   const navigat = useNavigate()
 
@@ -38,6 +44,9 @@ const Create = () => {
 
             <form onSubmit={handleSubmit}  className='mt-4'>
 
+
+
+           
                 <div className='mb-2 '>
                     <label className='font-semibold text-lg' >Details:</label>
                     <input className=' p-2 w-full border-2 rounded-lg border-gray-200' type='text' name='details' placeholder='Enter your details'   onChange={e => setInputData({...inputData, details:e.target.value})}

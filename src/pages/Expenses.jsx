@@ -28,6 +28,8 @@ const Expenses = () => {
           .then(res => {
             alert('Expenses has been deleted')
           }).catch(err => console.log(err))
+
+          navigate('/')
         }
     } 
  
